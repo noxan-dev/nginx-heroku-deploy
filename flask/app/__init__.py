@@ -12,7 +12,7 @@ cache.init_app(app)
 app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 MAIL_USERNAME = 'chaimmalek@gmail.com'
-MAIL_PASSWORD = 'chaimmalek'
+MAIL_PASSWORD = 'notmyrealpassword'
 
 
 @app.template_filter('remove_dashes')
