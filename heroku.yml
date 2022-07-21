@@ -5,6 +5,6 @@ build:
     web: flask/Dockerfile
     nginx: nginx/Dockerfile
 release:
-  image: web
+  image: nginx
   command:
     - "python"
