@@ -7,4 +7,4 @@ RUN pip install -r requirements.txt
 COPY . /code
 
 # CMD ["python", "app.py"]
-CMD gunicorn --bind 0.0.0.0:$PORT -w 3 run:app
+CMD gunicorn -w 3 run:app --bind 0.0.0.0:$PORT
