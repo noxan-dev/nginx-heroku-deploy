@@ -1,0 +1,7 @@
+build:
+  docker:
+    web: flask
+    nginx: nginx
+  release:
+    image: web
+
