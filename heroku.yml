@@ -2,6 +2,8 @@ build:
   docker:
     web: flask
     nginx: nginx
-  release:
-    image: web
+release:
+  image: web
+  command:
+    - "python"
 
