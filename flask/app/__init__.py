@@ -9,7 +9,7 @@ cache = Cache(config={'CACHE_TYPE': 'simple'})
 app = Flask(__name__)
 cache.init_app(app)
 
-app.config['SECRET_KEY'] = '5791628bb0b13ce0c676dfde280ba245'
+app.config['SECRET_KEY'] = os.environ.get('SECRET_KEY')
 
 MAIL_USERNAME = 'chaimmalek@gmail.com'
 MAIL_PASSWORD = 'chaimmalek'
