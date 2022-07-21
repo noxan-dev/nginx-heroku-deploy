@@ -2,8 +2,8 @@
 
 build:
   docker:
-    web: ./flask
-    nginx: ./nginx
+    web: .
+    nginx: .
 release:
   image: web
   command:
