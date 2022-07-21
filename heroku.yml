@@ -1,9 +1,10 @@
+# build a heroku docker file
+
 build:
   docker:
-    web: flask
-    nginx: nginx
+    web: ./flask
+    nginx: ./nginx
 release:
   image: web
   command:
     - "python"
-
