@@ -1,0 +1,177 @@
+{% extends 'base.html' %}
+{% set active_page = 'home' %}
+
+{% block title %}Home{% endblock title %}
+
+
+{% block content %}
+    <section id="introduction" class="bg-[#16161a]">
+        <div id="success-message" class="">
+            {% with messages = get_flashed_messages() %}
+                {% if messages %}
+                    <ul class=flashes>
+                        {% for message in messages %}
+                            <li><p class="text-center">{{ message }}</p></li>
+                        {% endfor %}
+                    </ul>
+                {% endif %}
+            {% endwith %}
+        </div>
+        <div class="main px-5 py-16 grid gap-5 auto-rows-auto grid-flow-row lg:auto-cols-auto lg:grid-flow-col place-items-center">
+            <div class="intro-text text-center lg:py-10 lg:px-14 lg:max-w-xl">
+                <h1>Hello, I'm <span
+                        class="animate-[pulse_4s_ease-in-out_infinite] underline decoration-wavy decoration-4 decoration-purple-900 underline-offset-4">Chaim</span>.
+                </h1>
+                <h2 class="pt-2">Software Engineer</h2>
+                <hr class="border-b-2 rounded bg-gray-600 border-gray-600 mx-auto w-3/5">
+                <h2>Photographer</h2>
+            </div>
+            <div class="grid gap-10 auto-rows-auto grid-flow-row">
+                <div class="">
+                    <div class="synopsys lg:max-w-lg">
+                        <div class="p-3 shadow-md shadow-current lg:hover:shadow-current lg:hover:shadow-lg lg:active:shadow-inner lg:active:shadow-current rounded-md bg-[#242629] cursor-pointer">
+                            <p>
+                                I am a <span
+                                    class="underline decoration-wavy decoration-3 decoration-blue-800 underline-offset-4">Software Engineer</span>
+                                who is enthusiastic about developing attractive and functional
+                                websites and programs. Thank you for dropping by.
+                            </p>
+                            <p class="italic text-[8px] invisible lg:visible">(psst click me)</p>
+                        </div>
+                        <div class="text-center pt-5 grid gap-5 auto-cols-auto grid-flow-col">
+                            <p><a class="text-white md:hover:bg-transparent hover:text-gray-400"
+                                  href="https://www.linkedin.com/in/chaimmalek/" title="Linkedin">
+                                <ion-icon name="logo-linkedin"></ion-icon>
+                            </a></p>
+                            <p><a class="text-white md:hover:bg-transparent hover:text-gray-400"
+                                  href="https://github.com/noxan-dev" title="Github">
+                                <ion-icon name="logo-github"></ion-icon>
+                            </a></p>
+                            <p><a class="text-white md:hover:bg-transparent hover:text-gray-400"
+                                  href="https://www.instagram.com/cma1ek/" title="Instagram">
+                                <ion-icon name="logo-instagram"></ion-icon>
+                            </a></p>
+                            <p>
+                                <a class="text-white md:hover:bg-transparent hover:text-gray-400"
+                                   href="https://docs.google.com/document/d/e/2PACX-1vRSF8SVTkfuoKIszoOgRfr4_WnmSvEcY9hjnSbF7OGKOH5hFdSik9U65miZKM5b4g/pub"
+                                   title="Resume">
+                                    <ion-icon name="document-outline"></ion-icon>
+                                </a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="work" class="bg-[#242629]">
+        <div class="px-5 py-16 grid gap-5 auto-rows-auto grid-flow-row lg:auto-cols-auto lg:grid-flow-col place-items-center">
+            <div class="order-2 lg:order-1 py-10">
+                <div class="grid gap-10 auto-rows-auto grid-flow-row lg:grid-cols-2 lg:grid-flow-row max-w-2xl">
+                    <a href="https://www.yeshivaesports.com">
+                        <div class="p-3 shadow-md shadow-current lg:hover:shadow-current lg:hover:shadow-lg rounded-md bg-[#16161a] h-full">
+                            <h3 class="text-center">Freelance Software Engineer @ Yeshiva Esports</h3>
+                            <hr class="border-b-1 rounded bg-gray-600 border-gray-600 mx-auto">
+                            <p>Working to create a language learning platform through the use of gaming.</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="p-3 shadow-md shadow-current lg:hover:shadow-current lg:hover:shadow-lg rounded-md bg-[#16161a]">
+                            <h3 class="text-center">Unnamed Social Media Platform</h3>
+                            <hr class="border-b-1 rounded bg-gray-600 border-gray-600 mx-auto">
+                            <p>A thought a friend of mine had that I would like to bring to life. Don't have information
+                                on it at the moment, so stay tuned</p>
+                        </div>
+                    </a>
+                    <a href="https://github.com/noxan-dev/Garden-Planner" class="lg:col-span-2 h-fit">
+                        <div class="p-3 shadow-md shadow-current lg:hover:shadow-current lg:hover:shadow-lg rounded-md bg-[#16161a]">
+                            <h3 class="text-center">Garden Planner @ Personal Project</h3>
+                            <hr class="border-b-1 rounded bg-gray-600 border-gray-600 mx-auto">
+                            <p>A tool to help plan and plant your vegetable garden. Not much at the moment but I'm
+                                excited to keep working on it</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="text-center order-1">
+                <div class="lg:px-24 lg:max-w-lg">
+                    <h1>Current Active Projects</h1>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="gallery" class="bg-[#16161a]">
+        <div class="px-5 py-16 grid gap-16 lg:grid-cols-2">
+            <div class="grid gap-5 auto-rows-auto lg:pr-24 lg:max-w-lg justify-self-center lg:mt-28 w-fit h-fit place-items-center">
+                <h1>Gallery</h1>
+                <div class="p-3 shadow-md shadow-current rounded-md bg-[#242629]">
+                    <p>In addition to being a SE, I am a landscape <span
+                            class="underline decoration-wavy decoration-3 decoration-emerald-900 underline-offset-4">photographer</span>
+                        passionate about capturing the best moments of life and using them to inspire my work.
+                    </p>
+                    <p>I also enjoy being outside and exploring new places.</p>
+                </div>
+                <div class="grid gap-5 grid-cols-3 text-center w-fit h-fit place-items-center">
+                    <button class="p-3 bg-[#7f5af0] text-[#fffffe] shadow-md shadow-black lg:hover:shadow-black lg:hover:shadow-lg lg:active:shadow-inner lg:active:shadow-black rounded-md">
+                        <a href="{{ url_for('gallery') }}" title="Instagram">View Gallery</a>
+                    </button>
+                    <p>or</p>
+                    <a href="https://www.instagram.com/cma1ek/" title="Instagram">
+                        <button class="text-white md:hover:bg-transparent hover:text-gray-400 w-fit h-fit">
+                            <ion-icon name="logo-instagram"></ion-icon>
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="grid gap-5 grid-cols-2 grid-flow-row place-self-center py-10">
+                <h2 class="text-center col-span-2">Latest Images</h2>
+                <img class="lg:h-[25rem]"
+                     src="{{ url_for('static', filename=('images/gallery/V-Chaim-Malek-#5149-4.jpg')) }}" alt="">
+                <img class="lg:h-[25rem]"
+                     src="{{ url_for('static', filename=('images/gallery/V-Chaim-Malek-#5149-1.jpg')) }}" alt="">
+                <img class="lg:h-[25rem]"
+                     src="{{ url_for('static', filename=('images/gallery/V-Chaim-Malek-#5149-2.jpg')) }}" alt="">
+                <img class="lg:h-[25rem]"
+                     src="{{ url_for('static', filename=('images/gallery/V-Chaim-Malek-#5149-3.jpg')) }}" alt="">
+            </div>
+        </div>
+    </section>
+    <footer id="contact" class="bg-[#242629]">
+        <div class="px-5 pt-16 pb-2">
+            <div class="grid gap-5 auto-rows-auto text-center place-items-center">
+                <div>
+                    <p>Connect</p>
+                    <hr class="border-b-2 rounded bg-gray-600 border-gray-600 mx-auto w-20">
+                </div>
+                <div id="contact-form" class="">
+                    <form class="" method="post" action="{{ url_for('redesign') }}">
+                        <div class="grid gap-5 auto-rows-auto lg:grid-cols-2 lg:grid-flow-row w-fit">
+                            <div class="lg:col-span-1">
+                                <label for="name" class="text-sm"></label>
+                                <input type="text" name="name" id="name"
+                                       class="w-64 h-12 p-2 border-b-2 border-gray-600 rounded-md" placeholder="Name">
+                            </div>
+                            <div class="lg:col-span-1">
+                                <label for="email" class="text-sm"></label>
+                                <input type="email" name="email" id="email"
+                                       class="w-64 h-12 p-2 border-b-2 border-gray-600 rounded-md" placeholder="Email">
+                            </div>
+                            <div class="lg:col-span-2">
+                                <label for="message" class="text-sm"></label>
+                                <textarea name="message" id="message" rows="6" cols="28"
+                                          class="p-3 border-b-2 border-gray-600 rounded-md"
+                                          placeholder="Add your Message here"></textarea>
+                            </div>
+                            <div class="lg:col-span-2">
+                                <button type="submit"
+                                        class="p-3 bg-[#7f5af0] text-[#fffffe] shadow-md shadow-black lg:hover:shadow-black lg:hover:shadow-lg lg:active:shadow-inner lg:active:shadow-black rounded-md">
+                                    Contact
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <p class="text-sm inset-x-0 bottom-0 top-full">Noxan &copy; {{ year }}</p>
+            </div>
+        </div>
+    </footer>
+{% endblock content %}
