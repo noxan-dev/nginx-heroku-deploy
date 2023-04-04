@@ -23,9 +23,13 @@ services:
     volumes:
       - ./nginx/conf.d:/etc/nginx/conf.d
       - ./entrypoint.sh:/entrypoint.sh
-    entrypoint: /entrypoint.sh
     networks:
       - flask_network
 
 networks:
   flask_network:
+    driver: bridge
+    ipam:
+      driver: default
+      config:
+        - subnet: 172.28.0.0/16
